@@ -209,3 +209,54 @@ The implicit methods copy the content of the attributes of the class, i.e. they 
 If an attribute of the class is a pointer, e.g. to an array the bit-by-bit copy is not enough, since it results in copying the address and not the objects that are pointed.
 - We need a deep copy that copies all the  objects pointed, or we risk that the  destruction of a copied object destroys the  original.
 - A deep copied object causes no issue to the source:  it has its own copy of the resources.
+
+## Module 05
+
+### Exceptions :
+- An exception is an occurrence of an undesirable situation that can be detected during
+program execution. For example, division by zero is an exception. Similarly, trying to open an input file that does not exist is an exception, as is an array index that goes out of bounds.
+- exceptions provide a way to react to exceptional circumstances (like runtime errors) in programs by transferring control to special functions called handlers.
+- The notion of an exception is provided to help get information from the point where an error is detected to a point where it can be handled. A function that cannot cope with a problem throws an exception, hoping that its (direct or indirect) caller can handle the problem. A function that wants to handle a kind of problem indicates that by catching the corresponding exception.
+
+
+### Why?
+There are situations when an exception occurs, but you don’t want the program to simply ignore the exception and terminate. For example, a program that monitors stock performance should not automatically sell if the account balance goes below a certain level. It should inform the stockholder and request an appropriate action. Similarly, a program that monitors a patient’s heartbeat cannot be terminated if the blood pressure goes very high. A program that monitors a satellite in space cannot be terminated if there is a temporary power failure in some section of the satellite.
+
+#### THROWING AN EXCEPTION throw()
+In order for an exception to occur in a try block and be caught by a catch block, the
+exception must be thrown in the try block. 
+- The general syntax to throw an exception is : 
+throw expression; 
+-  in which expression is a constant value, variable, or object. The object being thrown can be either a specific object or an anonymous object. It follows that in C++, an exception is a value.
+
+
+#### ORDER OF catch BLOCKS       catch() 
+A catch block can catch either all exceptions of a specific type or all types of excep-
+tions. The heading of a catch block specifies the type of exception it handles. As
+noted previously, the catch block that has an ellipsis (three dots) is designed to catch
+any type of exception. Therefore, if we put this catch block first, then this catch
+block can catch all types of exceptions.
+Suppose that an exception occurs in a try block and is caught by a catch block. The
+remaining catch blocks associated with that try block are then ignored. 
+- Therefore, you should be careful about the order in which you list catch blocks following a try block. 
+
+
+
+### Creating Your Own Exception Classes
+Whenever you create your own classes or write programs, exceptions are likely to
+occur. As you have seen, C++ provides numerous exception classes to deal with
+these situations. However, it does not provide all of the exception classes you will ever need. 
+Therefore, C++ enables programmers to create their own exception classes to
+handle both the exceptions not covered by C++’s exception classes and their own
+exceptions. 
+
+- C++ uses the same mechanism to process the exceptions that you define as it uses
+for built-in exceptions. However, you must throw your own exceptions using the
+throw statement.
+- In C++, any class can be considered an exception class. 
+- Therefore, an exception class is simply a class. It need not be inherited from the class exception. What makes a class an exception is how you use it.
+The exception class that you define can be very simple in the sense that it does not
+contain any members. For example, the following code can be considered an excep- tion class: <br />
+class dummyExceptionClass
+{
+};
