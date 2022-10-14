@@ -165,3 +165,36 @@ class Subclass_name : access_mode Superclass_name
 - In reverse order of construction: First constructed, last destructed.
 - Why ?
 The destructors are called in exactly the reverse order of the constructors – this is important because of potential dependencies.
+## Module 04
+
+### Subtype polymorphism 
+
+- Many programming languages provide a variety of implicit conversions (some- times called "coercions") that serve to make programs more succinct; the most widespread example is the conversion of integers to real (floating-point) num-bers. In modern type systems, such conversions are captured by the concept of subtyping. Subtype polymorphism is also known as runtime polymorphism
+When θ < θ, we say that θ is a subtype of θ or, occasionally, that θ' is a supertype of 0.
+ 
+- In programming language theory, subtyping (also subtype polymorphism or inclusion polymorphism) is a form of type polymorphism in which a subtype is a datatype that is related to another datatype (the supertype) by some notion of substitutability, meaning that program elements, typically subroutines or functions, written to operate on elements of the supertype can also operate on elements of the subtype. 
+
+- Key Concept: Polymorphism in C++
+- . The key idea behind OOP is polymorphism. Polymorphism is derived from a Greek word meaning “many forms.”  We speak of types related by inheritance as polymorphic types, because we can use the “many forms” of these types while ignoring the differences among them. 
+- . The fact that the static and dynamic types of references and pointers can differ is the cornerstone of how C++ supports polymorphism. 
+When we call a function defined in a base class through a reference or pointer to the base class, we do not know the type of the object on which that member is executed. The object can be a base-class object or an object of a derived class. If the function is virtual, then the decision as to which function to run is delayed until run time. The version of the virtual function that is run is the one defined by the type of the object to which the reference is bound or to which the pointer points.
+
+## Abstract classes
+Abstract classes are used to represent general concepts (for example, Shape, Animal), which can be used as base classes for concrete classes (for example, Circle, Dog). 
+- Pointers and references to an abstract class can be declared.
+- No objects of an abstract class can be created and no non-static data members whose type is an abstract class can be declared.
+- Abstract types cannot be used as parameter types, as function return types, or as the type of an explicit conversion 
+-  By definition, an abstract class in C++ is a class that has at least one pure virtual function.
+-  An abstract class cannot be instantiated, which means that we cannot create an instance or object for an abstract class. The object cannot be created because the class is not implemented fully.
+
+### What is a “virtual member function”? 
+A virtual function allows derived classes to replace the implementation provided by the base class. 
+
+### pure virtual method 
+The =0 suffix specifies a pure virtual method , meaning you can’t instantiate a BaseClass—only derive from it. 
+
+### Access Control
+A member of a class can be private, protected, or public:
+• If it is private, its name can be used only by member functions and friends of the class in which it is declared. 
+• If it is protected, its name can be used only by member functions and friends of the class in which it is declared and by member functions and friends of classes derived from this class.
+• If it is public, its name can be used by any function.
