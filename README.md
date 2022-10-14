@@ -195,6 +195,17 @@ The =0 suffix specifies a pure virtual method , meaning you can’t instantiate 
 
 ### Access Control
 A member of a class can be private, protected, or public:
-• If it is private, its name can be used only by member functions and friends of the class in which it is declared. 
-• If it is protected, its name can be used only by member functions and friends of the class in which it is declared and by member functions and friends of classes derived from this class.
-• If it is public, its name can be used by any function.
+- • If it is private, its name can be used only by member functions and friends of the class in which it is declared. 
+- • If it is protected, its name can be used only by member functions and friends of the class in which it is declared and by member functions and friends of classes derived from this class.
+- • If it is public, its name can be used by any function.
+
+
+### Shallow Copy and Deep Copy in C++
+#### When to use deep copy ?
+- the variables of an object have been dynamically allocated, then it is required to do a Deep Copy in order to create a copy of the object.
+ #### Shallow Copy  (Memberwise copy)
+The implicit methods copy the content of the attributes of the class, i.e. they perform a bit-by-bit copy of their content (shallow copy)
+#### Deep Copy  
+If an attribute of the class is a pointer, e.g. to an array the bit-by-bit copy is not enough, since it results in copying the address and not the objects that are pointed.
+- We need a deep copy that copies all the  objects pointed, or we risk that the  destruction of a copied object destroys the  original.
+- A deep copied object causes no issue to the source:  it has its own copy of the resources.
