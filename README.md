@@ -138,4 +138,24 @@ The overloads of operator>> and operator<< that take a std::istream& or std::ost
 
 ## Module 03
 
+### Inheritance
+The capability of a class to inherit the properties of some other class is known as Inheritance. The class whose properties are inherited is called the base class while the class which inherits the properties is known as the derived class.
+- Briefly, inheritance lets us say that a particular class inherits from another class. Ordinarily, we can use an object of an inherited class as if it were an object of the same type as the class from which it inherits
+• Benefits of inheritance :
+- code reuse
+-  adopt or extend the behavior of an existing class or set of classes
+• NOTE : All members of a class except Private, are inherited 
 
+
+### Syntax of Inheritance :
+class Subclass_name : access_mode Superclass_name
+
+
+### public, protected and private inheritance in C++ :
+
+
+
+- public, protected, and private inheritance have the following features:
+ • public inheritance makes public members of the base class public in the derived class, and the protected members of the base class remain protected in the derived class.
+ • protected inheritance makes the public and protected members of the base class protected in the derived class.
+ • private inheritance makes the public and protected members of the base class private in the derived class.
