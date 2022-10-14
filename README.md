@@ -117,3 +117,25 @@ If this seems hard to believe, just think of a number like π, which has infinit
 • double double precision
 • long double extended precision
 •All floating-point numbers are signed.  
+![image](https://user-images.githubusercontent.com/79755743/195878960-e56acb1a-04c7-4c59-b0b8-4e24c676328c.png)
+
+## Accuracy vs. Precision
+
+
+Accuracy and precision are two concepts in measurement that nicely capture the different properties of ints and floats (on any system, independent of the particular floating point representation used). "Accuracy" refers to how close a measurement is to the true value, whereas "precision" has to do with how much information you have about a quantity, how uniquely you have it pinned down.
+
+##  fixed-point numbers :
+A fixed point number just means that there are a fixed number of digits after the decimal point. A floating point number allows for a varying number of digits after the decimal point.  
+- C++ supports integer arithmetic and floating-point arithmetic, but it does not support fixed-point arithmetic.
+
+## ADHOC POLYMORPHISM 
+- Ad Hoc Polymorphism: Function Overloading :
+ Ad hoc polymorphism is function overloading. When you declare and define several versions of a function the function name remains the same but the function signature changes, meaning the number of function parameters and the types of those parameters varies from one version of the overloaded function to another. The decision regarding which version of the function to call is made by the compiler at compile time using the number and types of arguments passed in the function call. If the compiler finds a function matching the signature of the function call then it uses that version of the function. Failure to find a match results in a compiler error.  
+ 
+
+## Stream extraction and insertion
+The overloads of operator>> and operator<< that take a std::istream& or std::ostream& as the left hand argument are known as insertion and extraction operators. Since they take the user-defined type as the right argument , they must be implemented as non-members.
+
+## Module 03
+
+
