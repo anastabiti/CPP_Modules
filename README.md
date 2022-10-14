@@ -159,3 +159,9 @@ class Subclass_name : access_mode Superclass_name
  - •  public inheritance makes public members of the base class public in the derived class, and the protected members of the base class remain protected in the derived class.
  - •  protected inheritance makes the public and protected members of the base class protected in the derived class.
  - •  private inheritance makes the public and protected members of the base class private in the derived class.
+
+
+### Order of Constructor/ Destructor Call in C++
+- In reverse order of construction: First constructed, last destructed.
+- Why ?
+The destructors are called in exactly the reverse order of the constructors – this is important because of potential dependencies.
