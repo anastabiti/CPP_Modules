@@ -92,7 +92,28 @@ four required member functions below:
 
 
 - The Orthodox Canonical Class Form : 
-A default constructor: used internally to initialize objects and data members when no other value is available.
-A copy constructor: used in the implementation of call-by-value parameters.
-An assignment operator: used to assign one value to another.
-A destructor: Invoked when an object is deleted.
+• A default constructor: used internally to initialize objects and data members when no other value is available.
+• A copy constructor: used in the implementation of call-by-value parameters.
+• An assignment operator: used to assign one value to another.
+• A destructor: Invoked when an object is deleted.
+
+
+- Fundamental Types 
+
+
+Fundamental types are the most basic types of object and include integer, floating-point, character, Boolean, byte, size_t, and void. Some refer to fundamental types as primitive or built-in types because they’re part of the core language and almost always available to you. These types will work on any platform, but their features, such as size and memory layout, depend on implementation.
+
+
+- Floating-Point Types : 
+Floating-point types store approximations of real numbers (which in our case can be defined as any number that has a decimal point and a fractional part, such as 0.33333 or 98.6).
+Although it’s not possible to represent an arbitrary real number exactly in computer memory, it’s possible to store an approximation.
+If this seems hard to believe, just think of a number like π, which has infinitely many digits. With finite computer memory, how could you possibly represent infinitely many digits? 
+
+
+
+• As with all types, floating-point types take up a finite amount of memory, which is called the type’s precision. The more precision a floating-point type has, the more accurate it will be at approximating a real number.
+-  C++ offers three levels of precision for approximations: 
+• float single precision
+• double double precision
+• long double extended precision
+•All floating-point numbers are signed.  
