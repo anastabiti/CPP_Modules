@@ -245,7 +245,7 @@ remaining catch blocks associated with that try block are then ignored.
 ### Creating Your Own Exception Classes
 Whenever you create your own classes or write programs, exceptions are likely to
 occur. As you have seen, C++ provides numerous exception classes to deal with
-these situations. However, it does not provide all of the exception classes you will ever need. 
+these situations. However, it does not provide all of the exception classes you will ever need.  <br />
 Therefore, C++ enables programmers to create their own exception classes to
 handle both the exceptions not covered by C++’s exception classes and their own
 exceptions. 
@@ -253,10 +253,14 @@ exceptions.
 - C++ uses the same mechanism to process the exceptions that you define as it uses
 for built-in exceptions. However, you must throw your own exceptions using the
 throw statement.
-- In C++, any class can be considered an exception class. 
-- Therefore, an exception class is simply a class. It need not be inherited from the class exception. What makes a class an exception is how you use it.
+- In C++, any class can be considered an exception class.  <br />
+- Therefore, an exception class is simply a class. It need not be inherited from the class exception. What makes a class an exception is how you use it.  <br />
 The exception class that you define can be very simple in the sense that it does not
-contain any members. For example, the following code can be considered an excep- tion class: <br />
+contain any members. For example, the following code can be considered an exception class: <br />
 class dummyExceptionClass
 {
 };
+
+
+### Nested class
+A nested class is declared within the scope of another class. The name of a nested class is local to its enclosing class. Unless you use explicit pointers, references, or object names, declarations in a nested class can only use visible constructs, including type names, static members, and enumerators from the enclosing class and global variables.
